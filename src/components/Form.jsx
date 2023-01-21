@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Validation from "./validation";
 
-const Form = (props) => {
+const Form = ({login}) => {
     const initialState = { username: '', password: '' }
     const [userData, setUserData] = useState(initialState);
     const [errors, setErrors] = useState(initialState)
@@ -21,8 +21,13 @@ const Form = (props) => {
 
     }
 
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        login( userData);
+    }
+
 return(
-    <div>
+    <form onSubmit={handleSubmit}>
     
     <label htmlFor="username">Username</label>
     <input onChange={handleOnChange} name="username" type="text" value={userData.username}/>
@@ -32,8 +37,8 @@ return(
     <input onChange={handleOnChange} name="password" type="password" value={userData.password}/>
     <h1>{errors.password}</h1>
 
-    <button>login</button>
-    </div>
+    <button type="submit">login</button>
+    </form>
 )
 
 }

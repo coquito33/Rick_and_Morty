@@ -3,6 +3,7 @@ import Cards from './components/Cards.jsx'
 import Nav from './components/Nav'
 import Detail from './components/Detail'
 import About from './components/About'
+import Favorites from './components/Favorites'
 import { useState, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Form from './components/Form'
@@ -56,7 +57,7 @@ function App () {
 
   return (
     <div>
-      {location.pathname === "/" ? <Form /> : <Nav onSearch={onSearch} />  }
+      {location.pathname === "/" ? <Form login={login} /> : <Nav onSearch={onSearch} />  }
     
     <Routes>      
        
@@ -64,7 +65,7 @@ function App () {
           onClose={onClose}
           characters={characters}
         />} />  
-         
+         <Route path="/favorites" element={<Favorites /> } />
         <Route path="/detail/:detailId" element={<Detail />}  />
         <Route path="/about" element={<About />}  />
     </Routes>
