@@ -1,0 +1,46 @@
+.imgs {
+    display: flex;
+    border: 0.5px solid blue;
+    border-radius: 0.8rem;
+    width: 158px;
+    padding: 0.2em;
+}
+
+.imgsContainer {
+    padding: 0.2em;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    height: 30px;
+    width: 170px;
+    align-items: center;
+    color: blue;
+    background-color: gold;
+    border-radius: 0.8rem;
+    
+
+}
+
+.boton {
+    height: 25px;
+    border-radius: 0.8rem;
+    border: 1px solid blue;
+}
+
+.detalles {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    height: 50px;
+    width: 170px;
+    align-items:flex-start ;
+    height: min-content;
+    font-style: oblique; 
+    font-weight: bolder;
+    color: blue;
+    background-color: gold;
+    border-radius: 0.4rem;
+}

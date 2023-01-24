@@ -1,0 +1,10 @@
+.matrix {
+    padding: 20px;
+    margin: 100px auto;
+    outline: 6px solid yellow;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fill, minmax(180px,1fr));
+    
+}
